@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# Gems added for mongodb setup 
+gem 'mongoid', github: 'mongoid/mongoid'
+gem 'bson_ext'
+# mongo db dependencies ends here
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
@@ -11,6 +15,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
+
+#group :assets do
+  gem 'therubyracer'
+  gem "less-rails"
+  gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+#end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
