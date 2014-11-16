@@ -6,19 +6,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
 </head>
 <body>
-  <div class="navbar navbar-fixed-top" id="bs-example-navbar-collapse-1">
-    <div class="container">
-      <div class="nav-collapse">
-        <ul class="nav navbar-nav">
-          <li><%= link_to "Show All Tweets", tweets_path %></li>
-          <li><%= link_to "Price List" %></li>
-          <li><%= link_to "Contact Us" %></li>
-          <li><%= link_to "Cart" %></li>
-        </ul>
-      </div>
-      <div>
         <ul>
           <% if current_user%>
             <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
@@ -26,18 +16,6 @@
             <%= link_to "Sign In", new_user_session_path %>
           <% end %>
         </ul>
-      </div>
-    </div>
-  </div>
   
-<div class="container">
-  <div class="row">
-    <p class="notice"><%= notice %></p>                                                                                         <p class="alert"><%= alert %></p> 
-    <div class="col-md-9"> <%= yield %> </div>
-    <div class="col-md-3"><h2> About Us</h2>
-       We are not good, we are just badly good ;)
-    </div>
-  </div>
-</div>
 </body>
 </html>

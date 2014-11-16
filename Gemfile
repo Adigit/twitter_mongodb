@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bson_ext'
 gem 'devise'
+gem 'private_pub'
+gem 'thin'
 # mongo db dependencies ends here
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

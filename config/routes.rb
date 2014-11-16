@@ -4,7 +4,21 @@ Rails.application.routes.draw do
    
   resources :tweets
   
-  root to: "home#index"
+  #root to: "home#index"
+  
+  authenticated :user do
+    root 'users#index'
+  end
+ 
+  unauthenticated :user do
+    devise_scope :user do
+      get "/" => "devise/sessions#new"
+    end
+  end
+ 
+  resources :conversations do
+    resources :messages
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
