@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Gems added for mongodb setup 
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bson_ext'
+gem 'devise'
 # mongo db dependencies ends here
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
