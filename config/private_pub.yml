@@ -1,5 +1,5 @@
 development:
-  server: "http://localhost:9292/faye"
+  server: "http://purple-fireball-40-162943.apse1.nitrousbox.com:9292/faye"
   secret_token: "secret"
 test:
   server: "http://localhost:9292/faye"
