@@ -9,7 +9,7 @@ class ConversationsController < ApplicationController
     else
       @conversation = Conversation.create!(conversation_params)
     end
- 
+    logger.error ">>>>> conversion >>>> #{@conversation.inspect}"
     render json: { conversation_id: @conversation.id }
   end
  

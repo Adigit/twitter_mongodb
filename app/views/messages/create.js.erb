@@ -1,5 +1,7 @@
+<% logger.error ">>>>>> inside create.js.erb"%>
 <% publish_to @path do %>
     var id = "<%= @conversation.id %>";
+    alert(id);
     var chatbox = $("#chatbox_" + id + " .chatboxcontent");
     var sender_id = "<%= @message.user.id %>";
     var reciever_id = $('meta[name=user-id]').attr("content");

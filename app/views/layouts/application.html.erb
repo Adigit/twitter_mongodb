@@ -8,18 +8,11 @@
   <meta name="author" content="">
   <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
 
-  <title>Chatty</title>
+  <title>Twitter With Chat</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
 
 </head>
 
@@ -43,15 +36,4 @@
 
 </html> 
   
-<!--<div class="container">
-    
-    <ul>
-      <%# if current_user%>
-        <%#= link_to "Log Out", destroy_user_session_path, :method => :delete %>
-      <%# else%>
-        <%#= link_to "Sign In", new_user_session_path %>
-      <%# end %>
-    </ul>
-    <%#= yield %>
-  </div>-->
   

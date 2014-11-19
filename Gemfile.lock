@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
-  revision: 3edf24de985d946f16a2781644289cfdc51ba95b
+  revision: 67f160dd2ff5cc7cd843a17866c3b6bc8e7f2794
   specs:
     twitter-bootstrap-rails (3.2.0)
       actionpack (>= 3.1)
@@ -61,7 +61,7 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     commonjs (0.2.7)
-    connection_pool (2.0.0)
+    connection_pool (2.1.0)
     cookiejar (0.3.2)
     daemons (1.1.9)
     devise (3.4.1)
@@ -96,7 +96,7 @@ GEM
     hike (1.2.3)
     http_parser.rb (0.6.0)
     i18n (0.6.11)
-    jbuilder (2.2.4)
+    jbuilder (2.2.5)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-rails (3.1.2)
@@ -113,7 +113,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
-    minitest (5.4.2)
+    minitest (5.4.3)
     moped (2.0.1)
       bson (~> 2.2)
       connection_pool (~> 2.0)
@@ -181,7 +181,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.5.1)
+    turbolinks (2.5.2)
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
