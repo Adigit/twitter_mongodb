@@ -34,7 +34,7 @@ class User
   # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
   # field :locked_at,       type: Time
   
-  has_many :conversations, :foreign_key => :sender_id, :inverse_of => :userssss
+  has_many :conversations, :foreign_key => :sender_id, :inverse_of => :users
   def self.serialize_into_session(record)
     [record.id.to_s, record.authenticatable_salt]
   end

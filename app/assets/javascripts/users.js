@@ -8,12 +8,12 @@ var ready = function () {
 
     $('.start-conversation').click(function (e) {
         e.preventDefault();
-
+        
         var sender_id = $(this).data('sid');
         var recipient_id = $(this).data('rip');
-
+        console.log("Inside user.js >> send message button clicked >> sender_id >>" + sender_id + " >> recipient_id >>" + recipient_id);
         $.post("/conversations", { sender_id: sender_id, recipient_id: recipient_id }, function (data) {
-          console.log(data.conversation_id);
+          console.log("Inside user.js >> send message button clicked >> post response >> conversation id >> "+ data.conversation_id);
             chatBox.chatWith(data.conversation_id.$oid);
         });
     });

@@ -22,8 +22,7 @@ var ready = function () {
          */
          
         chatWith: function (conversation_id) {
-            alert('here');
-            console.log(conversation_id);
+            console.log("Inside chat.js >> chatWith function >> conversation_id >> " + conversation_id);
             chatBox.createChatBox(conversation_id);
             console.log('after chatboc create chat box 1');
             $("#chatbox_" + conversation_id + " .chatboxtextarea").focus();
@@ -87,10 +86,10 @@ var ready = function () {
          */
  
         createChatBox: function (conversation_id, minimizeChatBox) {
-          console.log('inside create chat box');
-          console.log(conversation_id);
+          console.log("Inside chat.js >> createChatBox function >> ");
+          
             if ($("#chatbox_" + conversation_id).length > 0) {
-              alert("inside if condition");
+              
                 if ($("#chatbox_" + conversation_id).css('display') == 'none') {
                     $("#chatbox_" + conversation_id).css('display', 'block');
                     chatBox.restructure();
@@ -98,14 +97,14 @@ var ready = function () {
                 $("#chatbox_" + conversation_id + " .chatboxtextarea").focus();
                 return;
             }
-           console.log(' 2 ');
+           
             $("body").append('<div id="chatbox_' + conversation_id + '" class="chatbox"></div>')
- 
+            console.log("Inside chat.js >> createChatBox function >> added chat box div in the body ");
             $.get("conversations/" + conversation_id, function (data) {
                 $('#chatbox_' + conversation_id).html(data);
                 $("#chatbox_" + conversation_id + " .chatboxcontent").scrollTop($("#chatbox_" + conversation_id + " .chatboxcontent")[0].scrollHeight);
             }, "html");
-           console.log(' 3 ');
+           console.log("Inside chat.js >> createChatBox function >> ");
             $("#chatbox_" + conversation_id).css('bottom', '0px');
  
             chatBoxeslength = 0;
