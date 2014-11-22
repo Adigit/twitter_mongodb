@@ -4,7 +4,7 @@
     var id = "<%= @conversation.id %>";
 <% logger.error ">>>>>> inside create.js.erb >>> converstion id >>> #{@conversation.id} "%>
     console.log(id);
-    alert(id);
+    // alert(id);
     var chatbox = $("#chatbox_" + id + " .chatboxcontent");
     var sender_id = "<%= @message.user.id %>";
     var reciever_id = $('meta[name=user-id]').attr("content");
