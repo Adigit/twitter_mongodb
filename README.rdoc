@@ -26,3 +26,14 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+Steps to start server in production mode 
+
+    1) start private pub in production mode
+        RAILS_ENV=production bundle exec rackup private_pub.ru -s thin -E production
+    
+    2) Start server in production mode
+        rails s -e production
+        
+    3) don't forget to change config/private_pub file for production mode
+        Change server to server: "http://purple-fireball-40-162943.apse1.nitrousbox.com:9292/faye"
