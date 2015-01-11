@@ -6,6 +6,7 @@ gem 'bson_ext'
 gem 'devise'
 gem 'private_pub'
 gem 'thin'
+gem 'rails_12factor'
 # mongo db dependencies ends here
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
